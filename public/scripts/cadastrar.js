@@ -48,7 +48,3 @@ function deleteProduct() {
 document
   .getElementById("btn-register-enviar")
   .addEventListener("click", addProduct);
-
-document
-  .getElementById("btn-delete-enviar")
-  .addEventListener("click", deleteProduct);
