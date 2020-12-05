@@ -33,9 +33,16 @@ header h1 {
 }
 
 .links a:hover,
-#btn-enviar:hover {
+#btn-register-enviar:hover,
+#btn-delete-enviar:hover,
+#btn-edit-enviar:hover,
+#btn-edit-enviar-aux:hover {
   background-color: #056b8d;
 }
+
+label {
+  font-family: "Lato", sans-serif;
+  }
 
 input {
   border: none;
@@ -82,4 +89,8 @@ input:focus {
 
 #btn-edit-enviar-aux {
   display: none;
+}
+
+textarea {
+  font-family: "Lato", sans-serif;
 }

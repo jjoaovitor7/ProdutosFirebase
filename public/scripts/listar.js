@@ -14,8 +14,11 @@ db.collection("Produtos")
   .where("exists", "==", true)
   .get()
   .then(function (querySnapshot) {
+    document.querySelector("textarea").value = "";
+
     querySnapshot.forEach(function (doc) {
-      document.querySelector("textarea").value += doc.id + ":" + doc.data().name + " => R$" + doc.data().price + "\n";
+      document.querySelector("textarea").value +=
+        doc.id + ":" + doc.data().name + " => R$" + doc.data().price + "\n";
     });
   })
   .catch(function (error) {
