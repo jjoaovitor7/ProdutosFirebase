@@ -47,7 +47,7 @@ input:focus {
     border-bottom: 2px solid #218d82;
 }
 
-#btn-enviar {
+#btn-register-enviar, #btn-delete-enviar {
     margin-top: 15px;
     font-family: "Lato", sans-serif;
 

@@ -11,7 +11,6 @@ let app = firebase.initializeApp(config);
 let db = firebase.firestore(app);
 
 function addProduct() {
-  console.log(document.getElementById("product").value);
   if (document.getElementById("product").value == " ") {
     return alert("Cadê o produto?");
   }
@@ -32,4 +31,24 @@ function addProduct() {
     });
 }
 
-document.getElementById("btn-enviar").addEventListener("click", addProduct);
+function deleteProduct() {
+  db.collection("Produtos")
+    .doc(document.getElementById("idProduct").value)
+    .delete()
+    .then(function () {
+      // console.log(docRef.id);
+      alert("Produto deletado!");
+    })
+    .catch(function (error) {
+      console.error(error);
+      alert("Produto não deltado devido a um erro!");
+    });
+}
+
+document
+  .getElementById("btn-register-enviar")
+  .addEventListener("click", addProduct);
+
+document
+  .getElementById("btn-delete-enviar")
+  .addEventListener("click", deleteProduct);
