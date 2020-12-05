@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./public/css/main.css" />
+
+    <title>Produtos</title>
+  </head>
+
+  <body>
+    <div class="register-product">
+      <label for="idProduct">ID do Produto:</label
+      ><input required type="number" id="idProduct" />
+      <label for="product">Nome do Produto:</label
+      ><input required type="text" id="product" />
+      <label for="priceProduct">Preço do Produto:</label
+      ><input required type="number" id="priceProduct" />
+    </div>
+
+    <button id="btn-enviar">Enviar!</button>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script src="./public/scripts/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25vh;
+}
+
+header h1 {
+  font-weight: 300;
+  font-family: "Lato", sans-serif;
+}
+
+.links {
+    margin-top: 15px;
+}
+
+.links a {
+    text-decoration: none;
+    margin: 0 10px;
+    font-family: "Lato", sans-serif;
+
+    background-color:#008CBA;; /* Green */
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+
+    border-radius: 15px;
+}
+
+.links a:hover, #btn-enviar:hover {
+    background-color:#056b8d;
+}
+
+input {
+    border: none;
+    border-bottom: 2px solid #9e9e9e;
+    outline: none;
+    transition: .2s ease-in-out;
+}
+
+input:focus {
+    border-bottom: 2px solid #218d82;
+}
+
+#btn-enviar {
+    margin-top: 15px;
+    font-family: "Lato", sans-serif;
+
+    border: none;
+    background-color:#008CBA;; /* Green */
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.register-product {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-product label {
+    margin: 15px 0;
+}
