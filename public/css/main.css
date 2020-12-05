@@ -1,12 +1,12 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 25vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 25vh;
 }
 
 header h1 {
@@ -15,57 +15,66 @@ header h1 {
 }
 
 .links {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 .links a {
-    text-decoration: none;
-    margin: 0 10px;
-    font-family: "Lato", sans-serif;
+  text-decoration: none;
+  margin: 0 10px;
+  font-family: "Lato", sans-serif;
 
-    background-color:#008CBA;; /* Green */
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    font-size: 16px;
+  background-color: #008cba; /* Green */
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
 
-    border-radius: 15px;
+  border-radius: 15px;
 }
 
-.links a:hover, #btn-enviar:hover {
-    background-color:#056b8d;
+.links a:hover,
+#btn-enviar:hover {
+  background-color: #056b8d;
 }
 
 input {
-    border: none;
-    border-bottom: 2px solid #9e9e9e;
-    outline: none;
-    transition: .2s ease-in-out;
+  border: none;
+  border-bottom: 2px solid #9e9e9e;
+  outline: none;
+  transition: 0.2s ease-in-out;
 }
 
 input:focus {
-    border-bottom: 2px solid #218d82;
+  border-bottom: 2px solid #218d82;
 }
 
-#btn-register-enviar, #btn-delete-enviar {
-    margin-top: 15px;
-    font-family: "Lato", sans-serif;
+#btn-register-enviar,
+#btn-delete-enviar,
+#btn-edit-enviar {
+  margin-top: 15px;
+  font-family: "Lato", sans-serif;
 
-    border: none;
-    background-color:#008CBA;; /* Green */
-    color: white;
-    padding: 16px 32px;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 15px;
+  border: none;
+  background-color: #008cba; /* Green */
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 15px;
 }
 
-.register-product {
-    display: flex;
-    flex-direction: column;
+.register-product,
+.edit-product {
+  display: flex;
+  flex-direction: column;
 }
 
-.register-product label {
-    margin: 15px 0;
+.register-product label,
+.edit-product label {
+  margin: 15px 0;
+}
+
+.esconder {
+  display: none;
 }

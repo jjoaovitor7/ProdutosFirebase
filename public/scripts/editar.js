@@ -10,20 +10,20 @@ var config = {
 let app = firebase.initializeApp(config);
 let db = firebase.firestore(app);
 
-function deleteProduct() {
+function editProduct() {
   db.collection("Produtos")
     .doc(document.getElementById("idProduct").value)
-    .delete()
+    .update({})
     .then(function () {
       // console.log(docRef.id);
-      alert("Produto deletado!");
+      alert("Produto editado!");
     })
     .catch(function (error) {
       console.error(error);
-      alert("Produto não deltado devido a um erro!");
+      alert("Produto não editado devido a um erro!");
     });
 }
 
 document
-  .getElementById("btn-delete-enviar")
-  .addEventListener("click", deleteProduct);
+  .getElementById("btn-edit-enviar")
+  .addEventListener("click", editProduct);
