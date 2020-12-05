@@ -97,3 +97,10 @@ textarea {
   border-radius: 15px;
   border: none;
 }
+
+#img-voltar {
+  position: fixed;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+}
