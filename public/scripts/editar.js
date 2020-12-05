@@ -11,20 +11,72 @@ let app = firebase.initializeApp(config);
 let db = firebase.firestore(app);
 
 function editProduct() {
-  db.collection("Produtos")
-    .doc(document.getElementById("idProduct").value)
-    .update({
-      name: document.getElementById("product").value,
-      price: document.getElementById("priceProduct").value,
-    })
-    .then(function () {
-      // console.log(docRef.id);
-      alert("Produto editado!");
-    })
-    .catch(function (error) {
-      console.error(error);
-      alert("Produto não editado devido a um erro!");
-    });
+  let productName = document.getElementById("product").value;
+  let productPrice = document.getElementById("priceProduct").value;
+  let docRef = db
+    .collection("Produtos")
+    .doc(document.getElementById("idProduct").value);
+
+  if (
+    productName != null &&
+    productName != "" &&
+    productName != " " &&
+    productPrice != null &&
+    productPrice != "" &&
+    productPrice != " "
+  ) {
+    docRef
+      .update({
+        name: productName,
+        price: productPrice,
+      })
+      .then(function () {
+        // console.log(docRef.id);
+        alert("Produto editado!");
+      })
+      .catch(function (error) {
+        console.error(error);
+        alert("Produto não editado devido a um erro!");
+      });
+  } else if (
+    productName != null &&
+    productName != "" &&
+    productName != " " &&
+    (productPrice == null || productPrice == "" || productPrice == " ")
+  ) {
+    docRef
+      .update({
+        name: productName,
+      })
+      .then(function () {
+        // console.log(docRef.id);
+        alert("Produto editado!");
+      })
+      .catch(function (error) {
+        console.error(error);
+        alert("Produto não editado devido a um erro!");
+      });
+  } else if (
+    (productName == null || productName == "" || productName == " ") &&
+    (productPrice != null &&
+    productPrice != "" &&
+    productPrice != " ")
+  ) {
+    docRef
+      .update({
+        price: productPrice,
+      })
+      .then(function () {
+        // console.log(docRef.id);
+        alert("Produto editado!");
+      })
+      .catch(function (error) {
+        console.error(error);
+        alert("Produto não editado devido a um erro!");
+      });
+  } else {
+    alert("Erro! Nenhuma condição foi atendida.");
+  }
 }
 
 document

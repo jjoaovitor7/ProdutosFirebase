@@ -18,7 +18,13 @@
   </head>
 
   <body>
-    <img onclick="history.go(-1)" id="img-voltar" src="../public/assets/back.png" width="50" height="50"/>
+    <img
+      onclick="history.go(-1)"
+      id="img-voltar"
+      src="../public/assets/back.png"
+      width="50"
+      height="50"
+    />
 
     <div class="edit-product">
       <label id="idProductLabel" for="idProduct">ID do Produto:</label
@@ -26,14 +32,18 @@
 
       <div class="esconder">
         <label for="product">Nome do Produto:</label
-        ><input required type="text" id="product" />
+        ><input type="text" id="product" />
         <label for="priceProduct">Preço do Produto:</label
-        ><input required type="number" id="priceProduct" />
+        ><input type="number" id="priceProduct" />
       </div>
     </div>
 
     <button id="btn-edit-enviar">Editar</button>
     <button id="btn-edit-enviar-aux">Editar</button>
+
+    <div class="obs">
+      <p>Se não quiser editar um dos campos é só deixá-lo em branco.</p>
+    </div>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>

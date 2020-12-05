@@ -42,7 +42,7 @@ header h1 {
 
 label {
   font-family: "Lato", sans-serif;
-  }
+}
 
 input {
   border: none;
@@ -103,4 +103,8 @@ textarea {
   cursor: pointer;
   top: 0;
   left: 0;
+}
+
+.obs p {
+  font-family: "Lato", sans-serif;
 }
