@@ -20,6 +20,7 @@ function addProduct() {
     .set({
       name: document.getElementById("product").value,
       price: document.getElementById("priceProduct").value,
+      exists: true,
     })
     .then(function () {
       // console.log(docRef.id);
