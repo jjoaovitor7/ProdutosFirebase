@@ -15,35 +15,30 @@ function addProduct() {
     return alert("Cadê o produto?");
   }
 
-  db.collection("Produtos")
-    .doc(document.getElementById("idProduct").value)
-    .set({
-      name: document.getElementById("product").value,
-      price: document.getElementById("priceProduct").value,
-      exists: true,
-    })
-    .then(function () {
-      // console.log(docRef.id);
-      alert("Produto cadastrado!");
-    })
-    .catch(function (error) {
-      console.error(error);
-      alert("Produto não cadastrado devido a um erro!");
-    });
-}
+  let docRef = db
+    .collection("Produtos")
+    .doc(document.getElementById("idProduct").value);
 
-function deleteProduct() {
-  db.collection("Produtos")
-    .doc(document.getElementById("idProduct").value)
-    .delete()
-    .then(function () {
-      // console.log(docRef.id);
-      alert("Produto deletado!");
-    })
-    .catch(function (error) {
-      console.error(error);
-      alert("Produto não deltado devido a um erro!");
-    });
+  docRef.get().then((docSnapshot) => {
+    if (docSnapshot.exists) {
+      return alert("Já existe um produto com esse ID!");
+    } else {
+      docRef
+        .set({
+          name: document.getElementById("product").value,
+          price: document.getElementById("priceProduct").value,
+          exists: true,
+        })
+        .then(function () {
+          // console.log(docRef.id);
+          alert("Produto cadastrado!");
+        })
+        .catch(function (error) {
+          console.error(error);
+          alert("Produto não cadastrado devido a um erro!");
+        });
+    }
+  });
 }
 
 document
