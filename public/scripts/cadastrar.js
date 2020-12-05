@@ -1,4 +1,4 @@
-var config = {
+const config = {
   apiKey: "",
   authDomain: "",
   projectId: "",
@@ -7,23 +7,23 @@ var config = {
   appId: "",
 };
 
-let app = firebase.initializeApp(config);
-let db = firebase.firestore(app);
+const app = firebase.initializeApp(config);
+const database = firebase.firestore(app);
 
 function addProduct() {
   if (document.getElementById("product").value == " ") {
     return alert("Cadê o produto?");
   }
 
-  let docRef = db
+  let docReference = database
     .collection("Produtos")
     .doc(document.getElementById("idProduct").value);
 
-  docRef.get().then((docSnapshot) => {
+  docReference.get().then((docSnapshot) => {
     if (docSnapshot.exists) {
       return alert("Já existe um produto com esse ID!");
     } else {
-      docRef
+      docReference
         .set({
           name: document.getElementById("product").value,
           price: document.getElementById("priceProduct").value,

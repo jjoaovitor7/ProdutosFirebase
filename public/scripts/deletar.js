@@ -1,4 +1,4 @@
-var config = {
+const config = {
   apiKey: "",
   authDomain: "",
   projectId: "",
@@ -7,12 +7,15 @@ var config = {
   appId: "",
 };
 
-let app = firebase.initializeApp(config);
-let db = firebase.firestore(app);
+const app = firebase.initializeApp(config);
+const database = firebase.firestore(app);
 
 function deleteProduct() {
-  db.collection("Produtos")
-    .doc(document.getElementById("idProduct").value)
+  let docReference = database
+    .collection("Produtos")
+    .doc(document.getElementById("idProduct").value);
+
+  docReference
     .delete()
     .then(function () {
       // console.log(docRef.id);

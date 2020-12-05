@@ -1,4 +1,4 @@
-var config = {
+const config = {
   apiKey: "",
   authDomain: "",
   projectId: "",
@@ -7,10 +7,12 @@ var config = {
   appId: "",
 };
 
-let app = firebase.initializeApp(config);
-let db = firebase.firestore(app);
+const app = firebase.initializeApp(config);
+const database = firebase.firestore(app);
 
-db.collection("Produtos")
+const collectionReference = database.collection("Produtos");
+
+collectionReference
   .where("exists", "==", true)
   .get()
   .then(function (querySnapshot) {
@@ -23,5 +25,5 @@ db.collection("Produtos")
   })
   .catch(function (error) {
     console.error(error);
-    alert("Erro ao listar os produtos!");
+    alert("Erro ao listar os produtos =/");
   });

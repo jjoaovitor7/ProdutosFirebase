@@ -1,4 +1,4 @@
-var config = {
+const config = {
   apiKey: "",
   authDomain: "",
   projectId: "",
@@ -7,13 +7,14 @@ var config = {
   appId: "",
 };
 
-let app = firebase.initializeApp(config);
-let db = firebase.firestore(app);
+const app = firebase.initializeApp(config);
+const database = firebase.firestore(app);
 
 function editProduct() {
   let productName = document.getElementById("product").value;
   let productPrice = document.getElementById("priceProduct").value;
-  let docRef = db
+
+  let docReference = database
     .collection("Produtos")
     .doc(document.getElementById("idProduct").value);
 
@@ -25,7 +26,7 @@ function editProduct() {
     productPrice != "" &&
     productPrice != " "
   ) {
-    docRef
+    docReference
       .update({
         name: productName,
         price: productPrice,
@@ -44,7 +45,7 @@ function editProduct() {
     productName != " " &&
     (productPrice == null || productPrice == "" || productPrice == " ")
   ) {
-    docRef
+    docReference
       .update({
         name: productName,
       })
@@ -58,11 +59,11 @@ function editProduct() {
       });
   } else if (
     (productName == null || productName == "" || productName == " ") &&
-    (productPrice != null &&
+    productPrice != null &&
     productPrice != "" &&
-    productPrice != " ")
+    productPrice != " "
   ) {
-    docRef
+    docReference
       .update({
         price: productPrice,
       })
