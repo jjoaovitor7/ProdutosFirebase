@@ -36,7 +36,8 @@ header h1 {
 #btn-register-enviar:hover,
 #btn-delete-enviar:hover,
 #btn-edit-enviar:hover,
-#btn-edit-enviar-aux:hover {
+#btn-edit-enviar-aux:hover,
+#btn-search-enviar:hover {
   background-color: #056b8d;
 }
 
@@ -58,7 +59,8 @@ input:focus {
 #btn-register-enviar,
 #btn-delete-enviar,
 #btn-edit-enviar,
-#btn-edit-enviar-aux {
+#btn-edit-enviar-aux,
+#btn-search-enviar {
   margin-top: 15px;
   font-family: "Lato", sans-serif;
 
@@ -107,4 +109,19 @@ textarea {
 
 .obs p {
   font-family: "Lato", sans-serif;
+}
+
+.search-product {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.search-product input {
+  width: 250px;
+  margin-left: 75px;
+}
+
+.search-product textarea {
+  margin-top: 15px;
 }
