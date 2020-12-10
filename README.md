@@ -6,7 +6,7 @@
 
 
 ## :scroll: Sobre
-CRUD de Produtos utilizando HTML + CSS + JS + Firebase.
+CRUD de Produtos com Sistema de Cadastro e de Login utilizando HTML + CSS + JS + Firebase.
 
 ---
 
