@@ -14,24 +14,34 @@
     <!-- css -->
     <link rel="stylesheet" href="../public/css/main.css" />
 
-    <title>Deletar Produto</title>
+    <title>Home</title>
   </head>
 
   <body>
-    <img onclick="history.go(-1)" id="img-voltar" src="../public/assets/back.png" width="50" height="50"/>
+    <img
+      onclick="firebase.auth().signOut().then(function() {
+        alert('Deslogado!');
+      }).catch(function(error) {
+      }); setTimeout(() => history.go(-1), 2500);"
+      id="img-voltar"
+      src="../public/assets/back.png"
+      width="50"
+      height="50"
+    />
 
-    <div class="delete-product">
-      <label for="idProduct">ID do Produto:</label
-      ><input required type="number" id="idProduct" />
+    <header>
+      <h1>Produtos</h1>
+    </header>
+    <div class="links">
+      <a href="./cadastrar.html">Cadastrar</a>
+      <a href="./editar.html">Editar</a>
+      <a href="./listar.html">Listar</a>
+      <a href="./deletar.html">Deletar</a>
+      <a href="./buscar.html">Buscar</a>
     </div>
 
-    <button id="btn-delete-enviar">Deletar</button>
-
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
-
-    <script src="../public/scripts/deletar.js"></script>
+    <script src="../public/scripts/home.js"></script>
   </body>
 </html>

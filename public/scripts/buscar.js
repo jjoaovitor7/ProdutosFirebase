@@ -10,6 +10,14 @@ const config = {
 const app = firebase.initializeApp(config);
 const database = firebase.firestore(app);
 
+firebase.auth().onAuthStateChanged(function (user) {
+  if (user) {
+    document.querySelector("body").style.visibility = "visible";
+  } else {
+    document.querySelector("body").style.visibility = "hidden";
+  }
+});
+
 function searchProduct() {
   const collectionReference = database.collection("Produtos");
   let nameProduct = document.getElementById("nameProduct").value;

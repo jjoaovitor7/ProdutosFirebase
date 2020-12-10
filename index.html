@@ -14,19 +14,31 @@
     <!-- css -->
     <link rel="stylesheet" href="./public/css/main.css" />
 
-    <title>Produtos</title>
+    <title>Cadastro</title>
   </head>
 
   <body>
     <header>
-      <h1>Produtos</h1>
+      <h1>Cadastro</h1>
     </header>
-    <div class="links">
-      <a href="./pages/cadastrar.html">Cadastrar</a>
-      <a href="./pages/editar.html">Editar</a>
-      <a href="./pages/listar.html">Listar</a>
-      <a href="./pages/deletar.html">Deletar</a>
-      <a href="./pages/buscar.html">Buscar</a>
+
+    <div>
+      <input type="email" id="email" placeholder="E-mail" />
+      <input type="password" id="password" placeholder="Senha" />
+      <input type="submit" id="btn-registro" value="Cadastrar" />
     </div>
+
+    <p id="loginexists">
+      Já tem login? Clique<a href="./pages/login.html"> aqui</a>.
+    </p>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script src="../public/scripts/cadastro.js"></script>
   </body>
 </html>

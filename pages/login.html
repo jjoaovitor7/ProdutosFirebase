@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- css -->
+    <link rel="stylesheet" href="../public/css/main.css" />
+
+    <title>Login</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Login</h1>
+    </header>
+
+    <div>
+      <input type="email" id="email" placeholder="E-mail" />
+      <input type="password" id="password" placeholder="Senha" />
+      <input type="submit" id="btn-login" value="Logar">
+    </div>
+
+    <p id="loginnotexists">Não tem login? Clique<a href="../index.html"> aqui</a>.</p>
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    
+        <script src="../public/scripts/login.js"></script>
+  </body>
+</html>
