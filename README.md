@@ -15,7 +15,8 @@ CRUD de Produtos com Sistema de Cadastro e de Login utilizando HTML + CSS + JS +
 * HTML
 * CSS
 * JavaScript
-* Firebase
+* Firebase (Banco de Dados)
+* PHP (Servidor)
 
 ---
 
