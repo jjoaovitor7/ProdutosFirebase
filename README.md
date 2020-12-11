@@ -4,22 +4,18 @@
 [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/uses-js.svg)](https://forthebadge.com)
 
-
 ## :scroll: Sobre
 CRUD de Produtos com Sistema de Cadastro e de Login utilizando HTML + CSS + JS + Firebase.
 
 ---
-
 
 ## :rocket: Tecnologias utilizadas
 * HTML
 * CSS
 * JavaScript
 * Firebase (Banco de Dados)
-* PHP (Servidor)
 
 ---
-
 
 ## :computer: Como baixar, configurar e rodar o projeto
 ```php
@@ -33,10 +29,8 @@ CRUD de Produtos com Sistema de Cadastro e de Login utilizando HTML + CSS + JS +
   // Criar um Banco de Dados Cloud Firestore (no Firebase).
   // Criar um Aplicativo (web) (no Firebase) e ao criar esse aplicativo você terá acesso à:
   // apiKey, authDomain, projectId, storageBucket, messagingSenderId e ao appId.
-  // Substituir os campos nos arquivos .js pelas suas "credenciais" (apiKey, authDomain, entre outros).
-
-  // Iniciar um Servidor Local na raiz do Projeto
-  php -S localhost:8080
+  // Substituir os campos nos arquivos .js pelas suas "credenciais".
+  // (apiKey, authDomain, entre outros).
 
 ```
 
