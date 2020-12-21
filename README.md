@@ -23,7 +23,7 @@ CRUD de Produtos com Sistema de Cadastro e de Login utilizando HTML + CSS + JS +
 
 ---
 
-## :computer: Como baixar, configurar e rodar o projeto
+## :computer: Como baixar e configurar o projeto
 ```php
   // Clonar o repositório
   $ git clone https://github.com/jjoaovitor7/ProdutosFirebase
